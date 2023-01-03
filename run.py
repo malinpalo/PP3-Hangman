@@ -160,7 +160,6 @@ def game_play(word, total_lives):
 
         except ValueError as e:
             print(f"{e}. Please try again.")
-            print("\n")
             continue
 
         print(hangman_tries(tries))
@@ -173,7 +172,7 @@ def game_play(word, total_lives):
             print("These are the letters that you have guessed:\
                 " + ", ".join(sorted(guesswork))
                     + "\n")
-                    
+
     if game_over:
         print(f"YEAY! {word} was the correct word!\n")
         player_win()
@@ -183,3 +182,37 @@ def game_play(word, total_lives):
         hangman_win()
 
     restart(total_lives)
+
+
+def restart(total_lives):
+    """
+    The player gets an option to restart the game. 
+    If the player chooses not to restart the game the player 
+    gets a good bye message an returns to the welcome screen
+    """
+    restart = False
+    while not restart:
+        restart_game = input("Play again? \"Y/N\"").upper()
+
+        try:
+            if restart_game == "Y":
+                restart = True
+                hm_word = get_word()
+
+                game_play(hm_word, total_lives)
+
+            elif restart_game == "N":
+                restart = True
+                print("\n")
+                print(Fore.LIGHTGREEN_EX + god_bye)
+                sleep(3)
+                clean_screen()
+                start()
+
+            else:
+                raise ValueError(
+                    f"You must enter Y or N. You entered {(restart_game)}"
+                )
+
+        except ValueError as e:
+            print(f"{e}. Please try again.")
