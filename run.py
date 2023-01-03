@@ -223,6 +223,13 @@ def clean_screen():
     """
     os.system("clear")
 
+def player_win():
+    """
+    Graphic that displays if the player win!
+    """
+    print(Fore.YELLOW + win)
+
+    
 def hangman_win():
     """
      Graphic that displays if the player loose!
