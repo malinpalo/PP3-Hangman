@@ -222,3 +222,9 @@ def clean_screen():
     To clear Terminal screen
     """
     os.system("clear")
+
+def hangman_win():
+    """
+     Graphic that displays if the player loose!
+    """
+    print(Fore.RED + loose)
