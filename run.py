@@ -12,6 +12,7 @@ from time import sleep
 
 colorama.init(autoreset=True)
 
+
 def welcome_screen():
     """
     Logo, rules and options for player to begin the game
@@ -62,8 +63,9 @@ def welcome_screen():
 
         else:
             print("\n")
-            print(f"{Fore.RED}Please enter 1 or 2 to make your choice")
+            print(f"{Fore.RED}Please enter 1 or 2 to make your choice\n")
             clean_screen()
+
 
 def choose_difficulty():
     """
@@ -71,8 +73,8 @@ def choose_difficulty():
     """
     print("\n")
     print("Select Difficulty level\n")
-    print("Press " + "E" + " for Easy")
-    print("Press " + "H" + " for Hard")
+    print("Press " + "E" + " for Easy\n")
+    print("Press " + "H" + " for Hard\n")
 
     level = False
     while not level:
@@ -88,7 +90,7 @@ def choose_difficulty():
             total_lives = 5
             return total_lives
         else:
-            print("\n Please enter E or H to make your choice")
+            print(" Please enter E or H to make your choice\n")
 
 
 def get_word():
@@ -121,32 +123,32 @@ def game_play(word, total_lives):
         try:
             if len(player_guess) > 1:
                 raise ValueError(
-                    f"Aaa, sorry, you can only guess 1 letter at a time."
-                    f"You picked {len(player_guess)} letters."
+                    f"Aaa, sorry, you can only guess 1 letter at a time.\n"
+                    f"You picked {len(player_guess)} letters.\n"
                 )
 
             elif not player_guess.isalpha():
                 raise ValueError(
                     f"Ohps, you can only guess letters,\n"
-                    f"you guessed {(player_guess)} that is not a letter."
+                    f"you guessed {(player_guess)} that is not a letter.\n"
                 )
 
             elif len(player_guess) == 1 and player_guess.isalpha():
                 if player_guess in guesswork:
                     raise ValueError(
-                        f"Oh, no! You have already guessed {(player_guess)}")
+                        f"Oh, no! You have already guessed {(player_guess)}\n")
 
                 elif player_guess not in word:
                     clean_screen()
-                    info = f"{Fore.RED}{(player_guess)} is not in the word."
-                    print("You lost a life, please try again!")
+                    info = f"{Fore.RED}{(player_guess)} is not in the word.\n"
+                    print("You lost a life, please try again!\n")
 
                     guesswork.append(player_guess)
                     tries -= 1
 
                 else:
                     clean_screen()
-                    info = f"{player_guess} is in the word. Good job"\
+                    info = f"{player_guess} is in the word. Good job\n"\
 
                     guesswork.append(player_guess)
                     secret_word_list = list(secret_word)
@@ -159,7 +161,7 @@ def game_play(word, total_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"{e}. Please try again.")
+            print(f"{e}. Please try again.\n")
             continue
 
         print(hangman_tries(tries))
@@ -178,7 +180,7 @@ def game_play(word, total_lives):
         player_win()
 
     else:
-        print(f"Sorry, the correct word was {word}")
+        print(f"Sorry, the correct word was {word}\n")
         hangman_win()
 
     restart(total_lives)
@@ -192,7 +194,7 @@ def restart(total_lives):
     """
     restart = False
     while not restart:
-        restart_game = input("Play again? \"Y/N\"").upper()
+        restart_game = input("Play again? \"Y/N\"\n").upper()
 
         try:
             if restart_game == "Y":
@@ -211,17 +213,19 @@ def restart(total_lives):
 
             else:
                 raise ValueError(
-                    f"You must enter Y or N. You entered {(restart_game)}"
+                    f"You must enter Y or N. You entered {(restart_game)}\n"
                 )
 
         except ValueError as e:
-            print(f"{e}. Please try again.")
+            print(f"{e}. Please try again.\n")
+
 
 def clean_screen():
     """
     To clear Terminal screen
     """
     os.system("clear")
+
 
 def player_win():
     """
@@ -236,6 +240,7 @@ def hangman_win():
     """
     print(Fore.RED + loose)
 
+
 def hangman_tries(tries):
     """
     Graphics for the hangman that are beeing displayed
@@ -243,6 +248,7 @@ def hangman_tries(tries):
     """
     for _ in tries_left:
         return tries_left[tries]
+
 
 def start():
     """
@@ -256,5 +262,6 @@ def start():
 
     word = get_word()
     game_play(word, total_lives)
+
 
 start()
