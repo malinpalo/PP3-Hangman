@@ -89,3 +89,11 @@ def choose_difficulty():
             return total_lives
         else:
             print("\n Please enter E or H to make your choice")
+
+
+def get_word():
+    """
+    Gets a word randomly from words.py for player to guess.
+    """
+    random_words = random.choice(hidden_words).upper()
+    return random_words
