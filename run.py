@@ -112,6 +112,64 @@ def game_play(word, total_lives):
     guesswork = []
     tries = total_lives
     print("\n")
-    print("Come on, let'splay!\n")
+    print("Come on, let's play!\n")
     print(f"Lives: {tries}\n")
     print("The secret word: " + " ".join(secret_word) + "\n")
+
+    while not game_over and tries > 0:
+        player_guess = input("Be careful, guess a letter:\n".upper())
+        try:
+            if len(player_guess) > 1:
+                raise ValueError(
+                    f"Aaa, sorry, you can only guess 1 letter at a time."
+                    f"You picked {len(player_guess)} letters."
+                )
+
+            elif not player_guess.isalpha():
+                raise ValueError(
+                    f"Ohps, you can only guess letters,\n"
+                    f"you guessed {(player_guess)} that is not a letter."
+                )
+
+            elif len(player_guess) == 1 and player_guess.isalpha():
+                if player_guess in guesswork:
+                    raise ValueError(
+                        f"Oh, no! You have already guessed {(player_guess)}")
+
+                elif player_guess not in word:
+                    clean_screen()
+                    info = f"{Fore.RED}{(player_guess)} is not in the word."
+                    print("You lost a life, please try again!")
+
+                    guesswork.append(player_guess)
+                    tries -= 1
+
+                else:
+                    clean_screen()
+                    info = f"{player_guess} is in the word. Good job"\
+
+                    guesswork.append(player_guess)
+                    secret_word_list = list(secret_word)
+                    indi = [i for i, letter in enumerate(word)
+                            if letter == player_guess]
+                    for index in indi:
+                        secret_word_list[index] = player_guess
+                        secret_word = "".join(secret_word_list)
+                    if "_" not in secret_word:
+                        game_over = True
+
+        except ValueError as e:
+            print(f"{e}. Please try again.")
+            print("\n")
+            continue
+
+        print(hangman_tries(tries))
+
+        if tries > 0:
+            print(info)
+            print("\n")
+            print(f"Lives: {tries}\n")
+            print("The word to be guessed: " + " ".join(secret_word) + "\n")
+            print("These are the letters that you have guessed:\
+                " + ", ".join(sorted(guesswork))
+                    + "\n")
