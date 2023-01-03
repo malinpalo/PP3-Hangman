@@ -97,3 +97,21 @@ def get_word():
     """
     random_words = random.choice(hidden_words).upper()
     return random_words
+
+
+def game_play(word, total_lives):
+    """
+    The game play.
+    Initial lives are beeing set, the secret word is
+    beeing displayed as underscores, correct letter
+    replaces the underscore. GameOver returns the player
+    to the welcomescreen or restarts the game.
+    """
+    secret_word = "_" * len(word)
+    game_over = False
+    guesswork = []
+    tries = total_lives
+    print("\n")
+    print("Come on, let'splay!\n")
+    print(f"Lives: {tries}\n")
+    print("The secret word: " + " ".join(secret_word) + "\n")
