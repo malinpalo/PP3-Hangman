@@ -229,9 +229,17 @@ def player_win():
     """
     print(Fore.YELLOW + win)
 
-    
+
 def hangman_win():
     """
      Graphic that displays if the player loose!
     """
     print(Fore.RED + loose)
+
+def hangman_tries(tries):
+    """
+    Graphics for the hangman that are beeing displayed
+    based on lives left.
+    """
+    for _ in tries_left:
+        return tries_left[tries]
