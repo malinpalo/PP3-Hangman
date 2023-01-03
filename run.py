@@ -216,3 +216,9 @@ def restart(total_lives):
 
         except ValueError as e:
             print(f"{e}. Please try again.")
+
+def clean_screen():
+    """
+    To clear Terminal screen
+    """
+    os.system("clear")
