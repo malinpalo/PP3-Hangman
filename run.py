@@ -173,3 +173,13 @@ def game_play(word, total_lives):
             print("These are the letters that you have guessed:\
                 " + ", ".join(sorted(guesswork))
                     + "\n")
+                    
+    if game_over:
+        print(f"YEAY! {word} was the correct word!\n")
+        player_win()
+
+    else:
+        print(f"Sorry, the correct word was {word}")
+        hangman_win()
+
+    restart(total_lives)
