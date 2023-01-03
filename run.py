@@ -256,3 +256,5 @@ def start():
 
     word = get_word()
     game_play(word, total_lives)
+
+start()
