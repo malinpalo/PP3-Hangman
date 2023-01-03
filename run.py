@@ -243,3 +243,16 @@ def hangman_tries(tries):
     """
     for _ in tries_left:
         return tries_left[tries]
+
+def start():
+    """
+    Runs the game
+    """
+    level = welcome_screen()
+    if level == "default":
+        total_lives = 7
+    else:
+        total_lives = choose_difficulty()
+
+    word = get_word()
+    game_play(word, total_lives)
