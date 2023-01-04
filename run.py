@@ -188,8 +188,8 @@ def game_play(word, total_lives):
 
 def restart(total_lives):
     """
-    The player gets an option to restart the game. 
-    If the player chooses not to restart the game the player 
+    The player gets an option to restart the game.
+    If the player chooses not to restart the game the player
     gets a good bye message an returns to the welcome screen
     """
     restart = False
