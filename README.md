@@ -8,14 +8,9 @@ The game is for everyone that need a break from real life to collect their thoug
 
 * The game can be found [here](https://pp3-hangthe-man.herokuapp.com/).
 
-![amiresponsive](./assest/readmeimages/hangman-amiresponsive.png)
+## How to play
+---
+- The welcome screen greets the user at a first with a colorfull logo.
+The logo was generated using the Ascii graffiti generator [PatorJK.](https://patorjk.com/software/taag/#p=display&f=Modular&t=HANGMAN)
 
-# Planning Of Hang-Hangman
-
-* When Planning what I thought about and wanted in the game.
-
-  + The user to see and be able to do .
-  + The user not to be able to see but the program to do .
-  + The game to be easy to use have easy to folow instructions with a logical flow to the  game.
-  + I wanted the game to give feed back to the user if the instructions where not followed correctly or if incorrect information was input by accident.
-  + I wanted the game to have a bit of color to it to give it a more fun look and to show with the colours instuctions , correct input and incorrect input.
+<img src="assets/images/welcomescreen.jpg">

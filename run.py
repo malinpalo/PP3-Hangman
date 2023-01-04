@@ -123,20 +123,23 @@ def game_play(word, total_lives):
         try:
             if len(player_guess) > 1:
                 raise ValueError(
-                    f"\nAaa, sorry, you can only guess 1 letter at a time.\n"
-                    f"You picked {len(player_guess)} letters."
+                    f"{Fore.RED}\nAaa, sorry, you can only guess 1\n"
+                    f"{Fore.RED}letter at a time."
+                    f"{Fore.RED}You picked {len(player_guess)} letters."
                 )
 
             elif not player_guess.isalpha():
                 raise ValueError(
-                    f"\nOhps, you can only guess letters,"
-                    f"you guessed {(player_guess)} that is not a letter."
+                    f"{Fore.RED}\nOhps, you can only guess letters,"
+                    f"{Fore.RED}\nyou guessed {(player_guess)}"
+                    f"{Fore.RED}\nthat is not a letter."
                 )
 
             elif len(player_guess) == 1 and player_guess.isalpha():
                 if player_guess in guesswork:
                     raise ValueError(
-                        f"\nOh, no! You have already guessed {(player_guess)}"
+                        f"{Fore.RED}\nOh, no! You have already guessed"
+                        f"{Fore.RED}\n{(player_guess)}"
                         )
 
                 elif player_guess not in word:
@@ -212,7 +215,8 @@ def restart(total_lives):
 
             else:
                 raise ValueError(
-                    f"You must enter Y or N. You entered {(restart_game)}\n"
+                    f"{Fore.RED}You must enter Y or N.\n"
+                    f"You entered {(restart_game)}\n"
                 )
 
         except ValueError as e:
