@@ -179,11 +179,11 @@ def game_play(word, total_lives):
     if game_over:
         player_win()
         print(f"{Fore.GREEN}\nYEAY! {word} was the correct word!\n")
-        
+
     else:
         hangman_win()
         print(f"{Fore.RED}Sorry, the correct word was {word}\n")
-        
+
     restart(total_lives)
 
 
@@ -262,7 +262,7 @@ def start():
         total_lives = 7
     else:
         total_lives = choose_difficulty()
-           
+
     hm_word = get_word()
     game_play(hm_word, total_lives)
 
