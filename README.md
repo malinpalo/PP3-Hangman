@@ -10,7 +10,7 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 - The welcome screen greets the user at a first with a colorfull logo. Rules and options for player to chose to start the game or to choose a difficulty level.
 The logo was generated using the Ascii graffiti generator [PatorJK.](https://patorjk.com/software/taag/#p=display&f=Modular&t=HANGMAN)
 
-![Welcomescreen](assets/images/welcomescreen.png)
+![Welcome screen](assets/images/welcomescreen.png)
 
 ![Rules and options](assets/images/rules%20and%20options.png)
 
@@ -22,6 +22,10 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Wrong Letter](assets/images/letter_not_in_word.png)
 
+- If the user guesses a letter that is in the word a text in green will inform the user that the letter was in the word.
+
+![Right letter](assets/images/right_letter.png)
+
 - If the user guesses the same letter all over again a varning text in red will appeare.
 
 ![Same letter](assets/images/same_letter.png)
@@ -30,9 +34,13 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Not a letter](assets/images/not_a_letter.png)
 
+- The player wins when the right letters has been guessed and secret word is being shown. A congratulation logo and text in green will appeare. The user gets the option to enter Y or N to restart the Game. 
+
+![You won](assets/images/congrats.png)
+
 - When the user has runned out of lives before guessing the right word the hangman will appeare together with a text of GameOver in red. The user gets the option to enter Y or N to restart the Game.
 
-![GameOver](assets/images/gameover.png)
+![Game Over](assets/images/gameover.png)
 
 - The game will start all over without the welcome screen if the player chooses to enter Y.
 
@@ -45,6 +53,8 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 - If the user chooses option 2 to enter the difficulty level on the welcomescreen a menu will appeare. Here the user can go for Easy (10 lives) or Hard (5 lives). The game starts efter entering the level.
 
 ![Difficulty level](assets/images/difficulty_level.png)
+
+- 
 
 ## Flowchart
 ---
@@ -67,16 +77,16 @@ This was my initial plan for the game. Some of the futures have changed as I dev
 - Family and friends tested for functionality
 - Tested for all scenarios with incorrect guesses.
 - Tested for all scenarios with successful guess.
-- Tested for all scenarios with moore than one letter and special characters.
+- Tested for all scenarios with more than one letter and special characters.
 - Tested for empty input. 
 
 ### Code validation
 PEP8 validated with no errors.
 
 ## Bugs
-- Some lines are to long and there where multiple whitespaces in the kode. PEP8 kept tracked on these during the build up and are fixed.
+- Some lines where to long and there where multiple whitespaces in the code during the build up. PEP8 kept tracked on these during the build up and the errors are fixed.
 - Thoroughout testing there where a lack of spaces between lines, that was fixed with "\n".
-- After deploying the game I realized that the user couldn't win the game. This was.........
+- After deploying the game I realized that the text for the right guessed letter didn't show. Either did the right letter guessed. This was fixed by removing the uppercase method at the function for generating random words.
 
 ## Technologies Used
 ---
@@ -100,23 +110,51 @@ PEP8 validated with no errors.
 
 ## Deployment
 ---
-The project was deployed using Code Institutes mock terminal for Heroku. 
+- The project was deployed using Code Institutes mock terminal for Heroku. 
+    - Initiated a repository in git via template supplied by codeinstute : :https://github.com/Code-Institute-Org/python-essentials-template
+    - Click Use this Template
+    - Add repository name
+    - Click Create Repository from template 
+    - Created all folders and files and code project
+    - Insure all inputs and any other location required have the \n required for Heroku
+    - In terminal type pip3 freeze > requirements.txt press enter , file is updated
+    - Remembering to add , commit and push all changes to github
+    - Go to https://dashboard.heroku.com/apps
+    - Click New
+    - Select Create New app
+    - Add project name & Changed Region to relevant country
+    - Click create app
+    - Go to settings section click on 
+    - Check config var and added PORT & 800 as I did not have any confidential files this was all that was needed
+    - Got to Build Packs 
+    - Add python click save
+    - Add Nodejs click save
+    - Check the order of these two files
+    - Go to Deploy Section 
+    - Go to Deployment Method
+    - Select GItHub
+    - Click connect to GitHub
+    - Put the repository name of Project in & click search
+    - Click connect
+    - Scroll down and choose Automatic deploys so as to insure project updates done in github are updated as code is changed or added to project
+    - Click enable automatic deploys
+    - Once project deployment has been completed a message will be shown and a button will be shown to view the mock terminal .
+    - Click "View" button to be taken to mock terminal
 
-- Steps to deploy:
-  - Fork or clone this repository.
-  - Ensure the Procfile is in place.
-  - requirements.txt can be left empty as this project does not use any external libraries. 
-  - Create a new app in [Heroku](https://dashboard.heroku.com/apps).
-  - Select "New" and "Create new app".
-  - Name the new app and click "Create new app".
-  - In "Settings" select "BuildPack" and select Python and Node.js. (Python must be at the top of the list).
-  - Whilst still in "Settings", click "Reveal Config Vars" and input the folloing. KEY: PORT, VALUE: 8000. Nothing else is needed here as this project does not have any sensitive files.
-  - Click on "Deploy" and select your deploy method and repository.
-  - Click "Connect" on selected repository. 
-  - Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section. 
-  - Heroku will now deploy the site.
+## Clone Project 
+
+- Cloning of Project was made possible by GitHub
+    - Go to Git Hub
+    - Go to Hang-Hangman repository https://github.com/malinpalo/pp3-hangman
+    - Click on it to go to main repository site 
+    - Click on the Code drop down button menu next to the greeen Gippod button
+    - Click on HTTP section you will see the http of the repository click on the window next to it it will say copied
+    - Clikced on Download and Zip
+    - Clicked on Open with GitHubDesktop
+
 
 ## Credits
+- Lessons from The Code Institute and the Love Sandwiches in assisting with how to start my project.
 - [YouTube](https://www.youtube.com/watch?v=cJJTnI22IF8&t=2s&ab_channel=KylieYing) - for inspiration 
 - [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) - for inspiration
 - [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg&t=272s) - for inspiration
@@ -124,7 +162,8 @@ The project was deployed using Code Institutes mock terminal for Heroku.
 - [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
 
 ## Acknowledgements
-- Thank you Code Institute for alwas beeing supporting.
+- Thank you Team Code Institute for always beeing supporting.
+- Thank to my cousin and my family for the great support.
 
 
 

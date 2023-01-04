@@ -195,7 +195,7 @@ def restart(total_lives):
     """
     restart = False
     while not restart:
-        restart_game = input(f"{Fore.BLUE}Play again? \"Y/N\"\n").upper()
+        restart_game = input(f"Play again? \"Y/N\"\n").upper()
 
         try:
             if restart_game == "Y":
