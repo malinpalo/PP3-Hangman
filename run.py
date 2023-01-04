@@ -234,7 +234,6 @@ def player_win():
     Graphic that displays if the player win!
     """
     print(Fore.YELLOW + win)
-    print()
 
 
 def hangman_win():
