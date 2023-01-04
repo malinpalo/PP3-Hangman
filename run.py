@@ -256,8 +256,7 @@ def start():
         total_lives = 7
     else:
         total_lives = choose_difficulty()
-        
-    
+           
     hm_word = get_word()
     game_play(hm_word, total_lives)
 
