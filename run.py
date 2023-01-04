@@ -233,7 +233,7 @@ def player_win():
     """
     Graphic that displays if the player win!
     """
-    print(Fore.GREEN + win)
+    print(Fore.YELLOW + win)
     print()
 
 
