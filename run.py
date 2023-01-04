@@ -122,29 +122,28 @@ def game_play(word, total_lives):
         try:
             if len(player_guess) > 1:
                 raise ValueError(
-                    f"{Fore.RED}\nAaa, sorry, you can only guess 1\n"
-                    f"{Fore.RED}letter at a time."
-                    f"{Fore.RED}You picked {len(player_guess)} letters."
+                    f"{Fore.RED}\nOhps, you can only guess 1 letter at a time."
+                    f"{Fore.RED} You picked {len(player_guess)} letters"
                 )
 
             elif not player_guess.isalpha():
                 raise ValueError(
                     f"{Fore.RED}\nOhps, you can only guess letters,"
-                    f"{Fore.RED}\nyou guessed {(player_guess)}"
-                    f"{Fore.RED}\nthat is not a letter."
+                    f"{Fore.RED} you guessed {(player_guess)}"
+                    f"{Fore.RED} that is not a letter"
                 )
 
             elif len(player_guess) == 1 and player_guess.isalpha():
                 if player_guess in guesswork:
                     raise ValueError(
-                        f"{Fore.RED}\nOh, no! You have already guessed"
-                        f"{Fore.RED}\n{(player_guess)}"
+                        f"{Fore.RED}\nOh, no!"
+                        f"{Fore.RED}\nYou already guessed {(player_guess)}"
                         )
 
                 elif player_guess not in word:
                     clean_screen()
                     info = f"{Fore.RED}{(player_guess)} is not in the word."\
-                           f"{Fore.RED}You lost a life, please try again!"
+                           f"{Fore.RED}\nYou lost a life, please try again!"
 
                     guesswork.append(player_guess)
                     tries -= 1
@@ -179,11 +178,11 @@ def game_play(word, total_lives):
 
     if game_over:
         player_win()
-        print(f"\nYEAY! {word} was the correct word!")
+        print(f"{Fore.GREEN}\nYEAY! {word} was the correct word!\n")
         
     else:
         hangman_win()
-        print(f"Sorry, the correct word was {word}")
+        print(f"{Fore.RED}Sorry, the correct word was {word}\n")
         
     restart(total_lives)
 
@@ -196,7 +195,7 @@ def restart(total_lives):
     """
     restart = False
     while not restart:
-        restart_game = input("Play again? \"Y/N\"\n").upper()
+        restart_game = input(f"{Fore.BLUE}Play again? \"Y/N\"\n").upper()
 
         try:
             if restart_game == "Y":
@@ -235,6 +234,7 @@ def player_win():
     Graphic that displays if the player win!
     """
     print(Fore.GREEN + win)
+    print()
 
 
 def hangman_win():
