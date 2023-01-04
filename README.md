@@ -7,7 +7,7 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 
 ## How to play
 ---
-- The welcome screen greets the user at a first with a colorfull logo. Rules and options for player to chose to start the game or to choose a difficulty level.
+- The welcome screen greets the user at first with a colorfull logo. The logo comees with rules and options for player to chose to start the game or to choose a difficulty level.
 The logo was generated using the Ascii graffiti generator [PatorJK.](https://patorjk.com/software/taag/#p=display&f=Modular&t=HANGMAN)
 
 ![Welcome screen](assets/images/welcomescreen.png)
@@ -80,10 +80,12 @@ This was my initial plan for the game. Some of the futures have changed as I dev
 - Tested for all scenarios with more than one letter and special characters.
 - Tested for empty input. 
 
-### Code validation
-PEP8 validated with no errors.
+## Code validation
+---
+- PEP8 validated with no errors.
 
 ## Bugs
+---
 - Some lines where to long and there where multiple whitespaces in the code during the build up. PEP8 kept tracked on these during the build up and the errors are fixed.
 - Thoroughout testing there where a lack of spaces between lines, that was fixed with "\n".
 - After deploying the game I realized that the text for the right guessed letter didn't show. Either did the right letter guessed. This was fixed by removing the uppercase method at the function for generating random words.
