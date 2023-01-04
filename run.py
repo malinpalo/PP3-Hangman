@@ -124,44 +124,44 @@ def game_play(word, total_lives):
             if len(player_guess) > 1:
                 raise ValueError(
                     f"Aaa, sorry, you can only guess 1 letter at a time.\n"
-                    f"You picked {len(player_guess)} letters.\n"
+                    f"You picked {len(player_guess)} letters."
                 )
 
             elif not player_guess.isalpha():
                 raise ValueError(
                     f"Ohps, you can only guess letters,\n"
-                    f"you guessed {(player_guess)} that is not a letter.\n"
+                    f"you guessed {(player_guess)} that is not a letter."
                 )
 
             elif len(player_guess) == 1 and player_guess.isalpha():
                 if player_guess in guesswork:
                     raise ValueError(
-                        f"Oh, no! You have already guessed {(player_guess)}\n")
+                        f"Oh, no! You have already guessed {(player_guess)}")
 
                 elif player_guess not in word:
                     clean_screen()
-                    info = f"{Fore.RED}{(player_guess)} is not in the word.\n"
-                    print("You lost a life, please try again!\n")
+                    info = f"{Fore.RED}{(player_guess)} is not in the word."\
+                           f"{Fore.RED}You lost a life, please try again!"
 
                     guesswork.append(player_guess)
                     tries -= 1
 
                 else:
                     clean_screen()
-                    info = f"{player_guess} is in the word. Good job\n"\
-
+                    info = f"{player_guess} is in the word. Good job!"
                     guesswork.append(player_guess)
                     secret_word_list = list(secret_word)
-                    indi = [i for i, letter in enumerate(word)
-                            if letter == player_guess]
-                    for index in indi:
+                    indices = [i for i, letter in enumerate(word)
+                               if letter == player_guess]
+                    for index in indices:
                         secret_word_list[index] = player_guess
                         secret_word = "".join(secret_word_list)
                     if "_" not in secret_word:
                         game_over = True
 
         except ValueError as e:
-            print(f"{e}. Please try again.\n")
+            print(f"{e}.\nPlease try again.\n")
+
             continue
 
         print(hangman_tries(tries))
@@ -170,18 +170,15 @@ def game_play(word, total_lives):
             print(info)
             print("\n")
             print(f"Lives: {tries}\n")
-            print("The word to be guessed: " + " ".join(secret_word) + "\n")
-            print("These are the letters that you have guessed:\
-                " + ", ".join(sorted(guesswork))
-                    + "\n")
+            print("The secret word: " + " ".join(secret_word) + "\n")
+            print("Letters guessed: " + ", ".join(sorted(guesswork)) + "\n")
 
     if game_over:
-        print(f"YEAY! {word} was the correct word!\n")
         player_win()
-
+        print(f"\nYEAY! {word} was the correct word!")
     else:
-        print(f"Sorry, the correct word was {word}\n")
         hangman_win()
+        print(f"Sorry, the correct word was {word}")
 
     restart(total_lives)
 
@@ -200,7 +197,7 @@ def restart(total_lives):
             if restart_game == "Y":
                 restart = True
                 hm_word = get_word()
-
+                clean_screen()
                 game_play(hm_word, total_lives)
 
             elif restart_game == "N":
@@ -217,7 +214,7 @@ def restart(total_lives):
                 )
 
         except ValueError as e:
-            print(f"{e}. Please try again.\n")
+            print(f"{e}.\nPlease try again.\n")
 
 
 def clean_screen():
@@ -259,9 +256,10 @@ def start():
         total_lives = 7
     else:
         total_lives = choose_difficulty()
-
-    word = get_word()
-    game_play(word, total_lives)
+        
+    
+    hm_word = get_word()
+    game_play(hm_word, total_lives)
 
 
 start()
