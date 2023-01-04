@@ -180,11 +180,11 @@ def game_play(word, total_lives):
     if game_over:
         player_win()
         print(f"\nYEAY! {word} was the correct word!")
-        clean_screen()
+        
     else:
         hangman_win()
         print(f"Sorry, the correct word was {word}")
-        clean_screen()
+        
     restart(total_lives)
 
 
@@ -234,7 +234,7 @@ def player_win():
     """
     Graphic that displays if the player win!
     """
-    print(Fore.YELLOW + win)
+    print(Fore.GREEN + win)
 
 
 def hangman_win():
