@@ -151,7 +151,7 @@ def game_play(word, total_lives):
 
                 else:
                     clean_screen()
-                    info = f"{player_guess} is in the word. Good job!"\
+                    info = f"{Fore.GREEN}{player_guess} is in the word :)"\
 
                     guesswork.append(player_guess)
                     secret_word_list = list(secret_word)
