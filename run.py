@@ -97,7 +97,7 @@ def get_word():
     Gets a word randomly from words.py for player to guess.
     """
     random_words = random.choice(open("words.py", "r").read().split('\n'))
-    return random_words.upper()
+    return random_words
 
 
 def game_play(word, total_lives):
