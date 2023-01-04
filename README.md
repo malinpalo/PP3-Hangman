@@ -121,6 +121,10 @@ The project was deployed using Code Institutes mock terminal for Heroku.
 - [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) - for inspiration
 - [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg&t=272s) - for inspiration
 - I've used several more youtube videos to get the hang of how to create a Hangman game in python. The above videos are the ones I took most inspiration from.
+- [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
+
+## Acknowledgements
+- Thank you Code Institute for alwas beeing supporting.
 
 
 
