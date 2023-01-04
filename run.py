@@ -5,7 +5,6 @@ Libraries and imports
 import random
 import colorama
 import os
-from words import hidden_words
 from graphics import welcome, win, loose, tries_left, god_bye
 from colorama import Fore
 from time import sleep
@@ -97,8 +96,8 @@ def get_word():
     """
     Gets a word randomly from words.py for player to guess.
     """
-    random_words = random.choice(hidden_words).upper()
-    return random_words
+    random_words = random.choice(open("words.py", "r").read().split('\n'))
+    return random_words.upper()
 
 
 def game_play(word, total_lives):
