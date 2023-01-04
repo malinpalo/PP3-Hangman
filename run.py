@@ -123,20 +123,21 @@ def game_play(word, total_lives):
         try:
             if len(player_guess) > 1:
                 raise ValueError(
-                    f"Aaa, sorry, you can only guess 1 letter at a time.\n"
+                    f"\nAaa, sorry, you can only guess 1 letter at a time.\n"
                     f"You picked {len(player_guess)} letters."
                 )
 
             elif not player_guess.isalpha():
                 raise ValueError(
-                    f"Ohps, you can only guess letters,\n"
+                    f"\nOhps, you can only guess letters,"
                     f"you guessed {(player_guess)} that is not a letter."
                 )
 
             elif len(player_guess) == 1 and player_guess.isalpha():
                 if player_guess in guesswork:
                     raise ValueError(
-                        f"Oh, no! You have already guessed {(player_guess)}")
+                        f"\nOh, no! You have already guessed {(player_guess)}"
+                        )
 
                 elif player_guess not in word:
                     clean_screen()
@@ -148,7 +149,8 @@ def game_play(word, total_lives):
 
                 else:
                     clean_screen()
-                    info = f"{player_guess} is in the word. Good job!"
+                    info = f"{player_guess} is in the word. Good job!"\
+
                     guesswork.append(player_guess)
                     secret_word_list = list(secret_word)
                     indices = [i for i, letter in enumerate(word)
