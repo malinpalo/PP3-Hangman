@@ -1,11 +1,32 @@
-# PP3-HANGMAN
+# **PP3-HANGMAN**
 
 PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock terminal on Heroku. Hang-Hangman is a traditional word guessing game and is for everyone that need a break from real life to collect their thoughts.
 
 
 * The game can be found [here](https://pp3-hangthe-man.herokuapp.com/).
+* The repository can be found [here](https://github.com/malinpalo/pp3-hangman)
 
-## How to play
+&nbsp;
+
+
+## **Table of Contents**
+---
+
+- [How to play](#how-to-play)
+- [Flowchart](#flowchart)
+- [Features](#features)
+- [Testing](#testing)
+  - [Code validation](#code-validation)
+  - [Bugs](#bugs)
+  - [Unfixed Bugs](#unfixed-bugs)
+- [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
+- [Clone project](#clone-project)
+- [Credits](#credits)
+
+&nbsp;
+
+### **How to play** 
 ---
 - The welcome screen greets the user at first with a colorfull logo. The logo comees with rules and options for player to chose to start the game or to choose a difficulty level.
 The logo was generated using the Ascii graffiti generator [PatorJK.](https://patorjk.com/software/taag/#p=display&f=Modular&t=HANGMAN)
@@ -54,15 +75,17 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Difficulty level](assets/images/difficulty_level.png)
 
-- 
+&nbsp;
 
-## Flowchart
+### **Flowchart**
 ---
 This was my initial plan for the game. Some of the futures have changed as I developed the game.
 
 ![Flowchart](assets/images/flowchart.png)
 
-## Features
+&nbsp;
+
+## **Features**
 ---
 - The user plays against the computer.
 - The computer accepts user input and gives responsive feedback.
@@ -73,45 +96,57 @@ This was my initial plan for the game. Some of the futures have changed as I dev
 - Validation and error handling for duplicate enteries, special characters and numbers.
 - Messages to the user are colored in red to stick out from the screen.
 
-## Testing
+&nbsp;
+
+## **Testing**
 ---
 - Family and friends tested for functionality
 - Tested for all scenarios with incorrect guesses.
 - Tested for all scenarios with successful guess.
 - Tested for all scenarios with more than one letter and special characters.
-- Tested for empty input. 
+- Tested for empty input.
 
-## Code validation
----
-- PEP8 validated with no errors.
+&nbsp;
 
-## Bugs
----
-- Some lines where to long and there where multiple whitespaces in the code during the build up. PEP8 kept tracked on these during the build up and the errors are fixed.
+### **Code validation**
+  - PEP8 validated with no errors.
+
+&nbsp;
+ 
+### **Bugs**
+- Some lines where to long and there where multiple whitespaces in the code during the build up. PEP8 kept track on these when running the code in PEP8 and the errors are fixed.
 - Thoroughout testing there where a lack of spaces between lines, that was fixed with "\n".
 - After deploying the game I realized that the text for the right guessed letter didn't show. Either did the right letter guessed. This was fixed by removing the uppercase method at the function for generating random words.
 
-## Technologies Used
+&nbsp;
+
+### **Unfixed Bugs**
+- After deploying the game I found out that the visuals of the hangman getting hanged follows after each wrong letter guessed. I didn't have time to fix these so I left them for features I like to improve.
+
+&nbsp;
+
+## **Technologies Used**
 ---
-### Languages
+### **Languages**
 - [Python:](https://www.python.org/) Python was the language beeing used for the whole project.
 - [Markdown:](https://www.markdownguide.org/basic-syntax/) Markdown language was used for writing the README.md/
 
-### Librarys
+### **Librarys**
 - random to select a random word.
 - os to clear the screen.
 - colorama to add color to text and images.
-
  
-### Environment
+### **Environment**
 - [GitHub:](https://github.com/) hosted the code.
 - [GitPod:](https://www.gitpod.io/?utm_source=googleads&utm_medium=search&utm_campaign=dynamic_search_ads&utm_id=16501579379&utm_content=dsa&gclid=EAIaIQobChMIn6TCrsyA-wIVDNPtCh319wDpEAAYASAAEgKK2vD_BwE) was used to write the code.
 - [Heroku:](https://id.heroku.com/login) was the cloud hosting platform used for deploying this project.
  
-### Other
+### **Other**
 - [Graffiti:](http://patorjk.com/software/taag/#p=display&h=1&v=2&f=Pawp&t=Hangman) was used for the large text images in the game.
 
-## Deployment
+&nbsp;
+
+## **Deployment**
 ---
 - The project was deployed using Code Institutes mock terminal for Heroku. 
     - Initiated a repository in git via template supplied by codeinstute : :https://github.com/Code-Institute-Org/python-essentials-template
@@ -144,8 +179,10 @@ This was my initial plan for the game. Some of the futures have changed as I dev
     - Once project deployment has been completed a message will be shown and a button will be shown to view the mock terminal .
     - Click "View" button to be taken to mock terminal
 
-## Clone Project 
+&nbsp;
 
+## **Clone Project** 
+---
 - Cloning of Project was made possible by GitHub
     - Go to Git Hub
     - Go to Hang-Hangman repository https://github.com/malinpalo/pp3-hangman
@@ -155,16 +192,15 @@ This was my initial plan for the game. Some of the futures have changed as I dev
     - Clikced on Download and Zip
     - Clicked on Open with GitHubDesktop
 
+&nbsp;
 
-## Credits
+## **Credits**
 - Lessons from The Code Institute and the Love Sandwiches in assisting with how to start my project.
 - [YouTube](https://www.youtube.com/watch?v=cJJTnI22IF8&t=2s&ab_channel=KylieYing) - for inspiration 
 - [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) - for inspiration
 - [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg&t=272s) - for inspiration
 - I've used several more youtube videos to get the hang of how to create a Hangman game in python. The above videos are the ones I took most inspiration from.
 - [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
-
-## Acknowledgements
 - Thank you Team Code Institute for always beeing supporting.
 - Thank to my cousin and my family for the great support.
 
