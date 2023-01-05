@@ -59,7 +59,8 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 ## Flowchart
 ---
 This was my initial plan for the game. Some of the futures have changed as I developed the game.
-![Flowchart](assets/images/)
+
+![Flowchart](assets/images/flowchart.png)
 
 ## Features
 ---
