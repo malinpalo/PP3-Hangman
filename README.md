@@ -82,7 +82,7 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Not a letter](assets/images/not_a_letter.png)
 
-- The player wins when the right letters has been guessed and secret word is being shown. A congratulation logo and text in green will appeare. The user gets the option to enter Y or N to restart the Game. 
+- The player wins when the right letters has been guessed and secret word is being shown. A congratulation logo with text in yellow together with text in green informing the player what the right word was will appeare. The user gets the option to enter Y or N to restart the Game. 
 
 ![You won](assets/images/congrats.png)
 
