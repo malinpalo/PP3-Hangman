@@ -4,7 +4,7 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 
 
 * The game can be found [here](https://pp3-hangthe-man.herokuapp.com/).
-* The repository can be found [here](https://github.com/malinpalo/pp3-hangman)
+* The repository can be found [here](https://github.com/malinpalo/pp3-hangman).
 
 &nbsp;
 
@@ -15,20 +15,23 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 - [How to play](#how-to-play)
 - [Flowchart](#flowchart)
 - [Features](#features)
+  -[Future features](#future-features) 
 - [Testing](#testing)
   - [Code validation](#code-validation)
   - [Bugs](#bugs)
   - [Unfixed Bugs](#unfixed-bugs)
 - [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Environment](#environment)
+  - [Other](#other)
 - [Deployment](#deployment)
-- [Clone project](#clone-project)
 - [Credits](#credits)
 
 &nbsp;
 
-### **How to play** 
+## **How to play** 
 ---
-- The welcome screen greets the user at first with a colorfull logo. The logo comees with rules and options for player to chose to start the game or to choose a difficulty level.
+- The welcome screen greets the user at first with a colorful logo. The logo comes with rules and options for player to choose to start the game or to choose a difficulty level.
 The logo was generated using the Ascii graffiti generator [PatorJK.](https://patorjk.com/software/taag/#p=display&f=Modular&t=HANGMAN)
 
 ![Welcome screen](assets/images/welcomescreen.png)
@@ -39,7 +42,7 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Game Play](assets/images/game_play.png)
 
-- If the user guesses a letter that isn't in the word visuals of the hangman will start building. A varning text in red will inform the user of whats going on. The user looses a life, letter guessed is shown.
+- If the user guesses a letter that isn't in the word visuals of the hangman will start building. A varning text in red will inform the user thet the letter guessed was not in the secret word and that the user looses a life. The letter guessed is shown.
 
 ![Wrong Letter](assets/images/letter_not_in_word.png)
 
@@ -63,78 +66,83 @@ The logo was generated using the Ascii graffiti generator [PatorJK.](https://pat
 
 ![Game Over](assets/images/gameover.png)
 
-- The game will start all over without the welcome screen if the player chooses to enter Y.
+- The game will start all over without the welcome screen if the player choose to enter Y.
 
 ![Game Play](assets/images/game_play.png)
 
-- If the user choose to enter N a text will wish the user good bye in green with delay. The player will be taken back to the welcome screen.
+- If the user chooses to enter N a text will wish the user good bye in green with delay. The player will be taken back to the welcome screen.
 
 ![Good Bye](assets/images/good_bye.png)
 
-- If the user chooses option 2 to enter the difficulty level on the welcomescreen a menu will appeare. Here the user can go for Easy (10 lives) or Hard (5 lives). The game starts efter entering the level.
+- If the user chooses option 2 to enter the difficulty level on the welcome screen a menu will appeare. Here the user can go for Easy (10 lives) or Hard (5 lives). The game starts efter entering the level.
 
 ![Difficulty level](assets/images/difficulty_level.png)
 
 &nbsp;
 
-### **Flowchart**
+[Back to Table of contents](#table-of-contents)
+
+## **Flowchart**
 ---
-This was my initial plan for the game. Some of the futures have changed as I developed the game.
+This was my initial plan for the game, to create the structure and logic of the game. Some of the features have changed as I developed the game.
+This flowchart was created using [Lucid Charts](https://www.lucidchart.com/).
 
 ![Flowchart](assets/images/flowchart.png)
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
 ## **Features**
 ---
 - The user plays against the computer.
 - The computer accepts user input and gives responsive feedback.
-- Random word generator
+- Random word generator.
 - The word is encrypted, so the user cannot see the word straight away, only the length appeare.
 - If the user guesses wrong letter the guessed letter will be displayed througout the whole game.
 - If the user guesses right letter the letter will be displayed in the encrypted word.
 - Validation and error handling for duplicate enteries, special characters and numbers.
 - Messages to the user are colored in red to stick out from the screen.
 
+### **Future features**
+- I like to enable for the user to input name.
+- I like to use Google sheets & Api - To keep data by the name of the player. To keep and return game scores. To present highest score etc. 
+- I like to enable user to guess entire word.
+
 &nbsp;
+
+[Back to Table of contents](#table-of-contents)
 
 ## **Testing**
 ---
-- Family and friends tested for functionality
+- Family and friends tested for functionality.
 - Tested for all scenarios with incorrect guesses.
 - Tested for all scenarios with successful guess.
 - Tested for all scenarios with more than one letter and special characters.
 - Tested for empty input.
 
-&nbsp;
 
 ### **Code validation**
-  - PEP8 validated with no errors.
+  - [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) no errors found.
+  ![PEP8](assets/images/pep8.png) 
 
-&nbsp;
- 
 ### **Bugs**
 - Some lines where to long and there where multiple whitespaces in the code during the build up. PEP8 kept track on these when running the code in PEP8 and the errors are fixed.
 - Thoroughout testing there where a lack of spaces between lines, that was fixed with "\n".
 - After deploying the game I realized that the text for the right guessed letter didn't show. Either did the right letter guessed. This was fixed by removing the uppercase method at the function for generating random words.
-
-&nbsp;
 
 ### **Unfixed Bugs**
 - After deploying the game I found out that the visuals of the hangman getting hanged follows after each wrong letter guessed. I didn't have time to fix these so I left them for features I like to improve.
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
 ## **Technologies Used**
 ---
 ### **Languages**
 - [Python:](https://www.python.org/) Python was the language beeing used for the whole project.
-- [Markdown:](https://www.markdownguide.org/basic-syntax/) Markdown language was used for writing the README.md/
-
-### **Librarys**
-- random to select a random word.
-- os to clear the screen.
-- colorama to add color to text and images.
+- [Markdown:](https://www.markdownguide.org/basic-syntax/) Markdown language was used for writing the README.md.
  
 ### **Environment**
 - [GitHub:](https://github.com/) hosted the code.
@@ -146,63 +154,41 @@ This was my initial plan for the game. Some of the futures have changed as I dev
 
 &nbsp;
 
+[Back to Table of contents](#table-of-contents)
+
 ## **Deployment**
 ---
-- The project was deployed using Code Institutes mock terminal for Heroku. 
-    - Initiated a repository in git via template supplied by codeinstute : :https://github.com/Code-Institute-Org/python-essentials-template
-    - Click Use this Template
-    - Add repository name
-    - Click Create Repository from template 
-    - Created all folders and files and code project
-    - Insure all inputs and any other location required have the \n required for Heroku
-    - In terminal type pip3 freeze > requirements.txt press enter , file is updated
-    - Remembering to add , commit and push all changes to github
-    - Go to https://dashboard.heroku.com/apps
-    - Click New
-    - Select Create New app
-    - Add project name & Changed Region to relevant country
-    - Click create app
-    - Go to settings section click on 
-    - Check config var and added PORT & 800 as I did not have any confidential files this was all that was needed
-    - Got to Build Packs 
-    - Add python click save
-    - Add Nodejs click save
-    - Check the order of these two files
-    - Go to Deploy Section 
-    - Go to Deployment Method
-    - Select GItHub
-    - Click connect to GitHub
-    - Put the repository name of Project in & click search
-    - Click connect
-    - Scroll down and choose Automatic deploys so as to insure project updates done in github are updated as code is changed or added to project
-    - Click enable automatic deploys
-    - Once project deployment has been completed a message will be shown and a button will be shown to view the mock terminal .
-    - Click "View" button to be taken to mock terminal
-
+  - The project was deployed using Code Institutes mock terminal for Heroku. 
+  - I committed and pushed all code for the game to GitHub from GitPod.
+  - I created an account on [Heroku](https://id.heroku.com/login).
+  - I clicked on 'New' and clicked 'Create New App'.
+- I then chose the correct region, Europe and created a name for my app.
+- In settings I sorted out the Buildpacks for everything to work.
+- I inputted the python and nodejs buildpacks.
+- I then put in the config var PORT 8000.
+- I then clicked on the deploy page and linked my GitHub repo with the Heroku app.
+- I then deployed the branch at the bottom of the page, ensuring no errors occurred.
+- I enabled automatic deploys so if I edit and push the code to GitHub, Heroku automatically updates and redoploys.
+- I then opened the game on Heroku to ensure it functions efficiently and checked for any errors that may have occurred.
+    
 &nbsp;
 
-## **Clone Project** 
----
-- Cloning of Project was made possible by GitHub
-    - Go to Git Hub
-    - Go to Hang-Hangman repository https://github.com/malinpalo/pp3-hangman
-    - Click on it to go to main repository site 
-    - Click on the Code drop down button menu next to the greeen Gippod button
-    - Click on HTTP section you will see the http of the repository click on the window next to it it will say copied
-    - Clikced on Download and Zip
-    - Clicked on Open with GitHubDesktop
+[Back to Table of contents](#table-of-contents)
 
-&nbsp;
 
 ## **Credits**
 - Lessons from The Code Institute and the Love Sandwiches in assisting with how to start my project.
-- [YouTube](https://www.youtube.com/watch?v=cJJTnI22IF8&t=2s&ab_channel=KylieYing) - for inspiration 
-- [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) - for inspiration
-- [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg&t=272s) - for inspiration
+- [YouTube](https://www.youtube.com/watch?v=cJJTnI22IF8&t=2s&ab_channel=KylieYing) - for inspiration. 
+- [YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) - for inspiration.
+- [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg&t=272s) - for inspiration.
 - I've used several more youtube videos to get the hang of how to create a Hangman game in python. The above videos are the ones I took most inspiration from.
+- [Stackoverflow](https://stackoverflow.com/)
+- [W3 Schools](https://www.w3schools.com/)
 - [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
 - Thank you Team Code Institute for always beeing supporting.
 - Thank to my cousin and my family for the great support.
+
+[Back to Table of contents](#table-of-contents)
 
 
 
