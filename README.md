@@ -169,7 +169,7 @@ This flowchart was created using [Lucid Charts](https://www.lucidchart.com/).
 - [Heroku:](https://id.heroku.com/login) was the cloud hosting platform used for deploying this project.
  
 ### **Other**
-- [Graffiti:](http://patorjk.com/software/taag/#p=display&h=1&v=2&f=Pawp&t=Hangman) was used for the large text images in the game.
+- [Graffiti:](http://patorjk.com/software/taag/#p=display&f=Modular&t=Hangman) was used for the large text images in the game.
 
 &nbsp;
 
