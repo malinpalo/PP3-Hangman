@@ -170,6 +170,7 @@ This flowchart was created using [Lucid Charts](https://www.lucidchart.com/).
  
 ### **Other**
 - [Graffiti:](http://patorjk.com/software/taag/#p=display&f=Modular&t=Hangman) was used for the large text images in the game.
+- [Gifcap](https://gifcap.dev/): was used to build the gif in the game.
 
 &nbsp;
 
