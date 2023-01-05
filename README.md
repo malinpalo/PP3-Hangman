@@ -12,6 +12,9 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 ## **Table of Contents**
 ---
 
+- [UX](#ux)
+    - [Website owners goals](#website-owners-goals)
+    - [Users goals](#users-goals)
 - [How to play](#how-to-play)
 - [Flowchart](#flowchart)
 - [Features](#features)
@@ -28,6 +31,31 @@ PP3-HANGMAN is a Python terminal game, which runs on the Code Institute mock ter
 - [Credits](#credits)
 
 &nbsp;
+
+## UX
+---
+
+### Website owners goals
+- To offer entertainment to the user who wants to play the game.
+- To provide the user with simple and clear information about the game.
+- To provide the user with options to answer with different inputs. 
+
+&nbsp;
+
+### Users goals
+For new users:
+- To play a game of The Hangman against the computer.
+- To easily understand how to play the game.
+- To easily navigate in interfaces and commands.
+- To always have reference navigation commands available.
+
+Returning visitors:
+- To practice their skills in playing The Hangman game against the computer.
+- To be able to play The Hangman game as many times as they want.
+
+&nbsp;
+
+[Back to Table of contents](#table-of-contents)
 
 ## **How to play** 
 ---
